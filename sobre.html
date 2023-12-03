@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>ANIXZ</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">ANIXZ</a></div>
+            <ul class="links">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="serviços.html">SERVIÇOS</a></li>
+            </ul>
+            <a href="login.html" class="botao_acao">ENTRAR</a>
+            <div class="alternar_botao">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="menu_drop">
+            <li><a href="index.html", id="inicio">INÍCIO</a></li>
+            <li><a href="sobre.html", id="sobre">SOBRE</a></li>
+            <li><a href="serviços.html">SERVIÇOS</a></li>
+            <li><a href="login.html" class="botao_acao">ENTRAR</a></li>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Sobre nós:</h1>
+            <p>
+                Bem-vindo ao nosso inovador serviço de streaming! Nosso site oferece uma experiência envolvente e conveniente, permitindo que você assista a uma ampla variedade de conteúdos audiovisuais de alta qualidade a qualquer momento e em qualquer lugar. Desde filmes emocionantes até séries viciantes, passando por documentários educativos, nossa plataforma reúne uma biblioteca diversificada para atender a todos os gostos.
+                
+                Desfrute da comodidade de escolher entre diferentes gêneros, explorar listas de reprodução personalizadas e descobrir novos lançamentos regularmente atualizados. Além disso, nossa interface intuitiva torna a navegação fácil e agradável, proporcionando uma experiência de usuário fluida.
+                
+                Seja você um entusiasta de cinema, um amante de séries ou alguém em busca de entretenimento variado, nosso site de streaming é o seu destino digital para mergulhar em um mundo de emoções, conhecimento e diversão. Prepare-se para uma jornada cinematográfica inigualável enquanto transformamos seu tempo livre em momentos memoráveis. Descubra, relaxe e aproveite o melhor do entretenimento com nosso serviço de streaming!</p>
+           
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.alternar_botao')
+        const toggleBtnIcon = document.querySelector('.alternar_botao i')
+        const dropdownMenu = document.querySelector('.menu_drop')
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+
+</html>

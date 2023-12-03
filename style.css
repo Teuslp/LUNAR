@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:     'Open Sans', sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url(wlpplua.png);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: rgba(221, 221, 221, 0.87)
+}
+
+/* HEADER */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.204);
+    border-radius: 10px;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .alternar_botao {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.botao_acao{
+    background-color: rgb(104, 162, 238);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.botao_acao:hover{
+    scale: 1.05;
+    color: #fff;
+}
+
+.botao_acao:active{
+    scale: 0.95;
+}
+
+/* MENU DROPDOWN */
+.menu_drop{
+    display: none;
+    position: absolute;
+    height: 0;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(182, 182, 182, 0.363);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu_drop.open{
+    height: 240px;
+}
+
+.menu_drop .botao_acao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_drop li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN */
+section#inicio{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#inicio h1{
+    font-family: Righteous;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+/* DESIGNE RESPONSIVO */
+@media (max-width:992px) {
+    .navbar .links,
+    .navbar .botao_acao {
+        display: none;
+    }
+
+    .navbar .alternar_botao{
+        display: block;
+    }
+
+    .menu_drop{
+        display: block;
+    }
+}
+
+@media (max-width:576px) {
+    .menu_drop{
+        left: 2tem;
+        width: unset;
+    }
+}
+
+#pz{
+    background-color: #000;
+    border-radius: 10px;
+}

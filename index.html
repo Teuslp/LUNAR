@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lilita+One&family=Righteous&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>LUNAR</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">LUNAR</a></div>
+            <ul class="links">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="serviços.html">SERVIÇOS</a></li>
+            </ul>
+            <a href="login.html" class="botao_acao">ENTRAR</a>
+            <div class="alternar_botao">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="menu_drop">
+            <li><a href="index.html", id="inicio">INÍCIO</a></li>
+            <li><a href="sobre.html", id="sobre">SOBRE</a></li>
+            <li><a href="serviços.html">SERVIÇOS</a></li> 
+            <li><a href="login.html" class="botao_acao">ENTRAR</a></li>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>LUNAR STREAMING <br>
+            FILMES & SÉRIES </h1>
+           
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.alternar_botao')
+        const toggleBtnIcon = document.querySelector('.alternar_botao i')
+        const dropdownMenu = document.querySelector('.menu_drop')
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+
+</html>
